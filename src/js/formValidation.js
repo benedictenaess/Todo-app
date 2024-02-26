@@ -50,3 +50,24 @@ const validateForm = (todoInput, dateInput, titleError, dateError) => {
 	}
 	return {formErrorStatus}
 }
+
+const validateDescription = (descInput, counterLabel, descError) =>{
+	descInput.addeventlistener('input', ()=>{
+		counterLabel.textContent = `Typed characters: ${descInput.value.length}/100`;
+		if (descInput.value.length >= 100){
+			counterLabel.style.color = 'red';
+			descError.style.visibility = 'visible';
+			descError.textContent = 'Description must be less then 100 characters ⚠️';
+		} else {
+			counterLabel.style.color = 'black';
+			descError.style.visibility = 'hidden';
+		}
+	})
+	descInput.addeventlistener('keydown', (e)=> {
+		if (descInput.value.length >= 100 && e.key !== 'backspace') {
+			e.preventDefault();
+		}
+	})
+}
+
+export {validateForm, validateDescription}
