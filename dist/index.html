@@ -7,6 +7,31 @@
 	<title>Todo app workshop</title>
 </head>
 <body>
+	<header class="app-title">
+		<h1>Todo App</h1>
+	</header>
+	<main>
+		<section class="enter-todos-container">
+			<form class="todo-form">
+				<label for="task-title-input">Task:</label>
+				<input type="text" name="task-title-input" class="task-title-input" placeholder="Enter task title">
+				<label for="task-title-input" class="title-error">Title error</label>
+
+				<label for="task-date-input">Date:</label>
+				<input type="date" name="task-date-input" class="task-date-input">
+				<label for="task-date-input" class="date-error">Date error</label>
+
+				<label for="task-description-input">Description:</label>
+				<textarea  name="task-description-input" class="task-description-input" cols="30" rows="10"></textarea>
+				<label for="task-description-input" class="char-count">Typed characters: 0</label>
+				<label for="task-description-input" class="description-error">Description error</label>
+
+				<button class="submit-task-button">Submit ➕ </button>
+				<label class="success-message">Successfully added message</label>
+			</form>
+		</section>
+		<section class="display-todos-container"></section>
+	</main>
 	<script src="../src/js/app.js"></script>
 </body>
 </html>
