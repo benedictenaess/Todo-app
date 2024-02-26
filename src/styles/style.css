@@ -118,3 +118,9 @@ main {
 	flex-basis: 15%;
 	/* background-color: pink; */
 }
+
+.title-error,
+.date-error,
+.description-error {
+	visibility: hidden;
+}
